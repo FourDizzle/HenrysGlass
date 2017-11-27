@@ -24,6 +24,10 @@
     }
   }
 
+  // $('.nav-link').click(function() {
+  //   $('#navbarsExampleDefault').dropdown('toggle')
+  // })
+
   $(window).scroll(function() {
     resizeNavBarByScrollLocation()
   })
@@ -43,6 +47,7 @@ $('a[href*="#"]')
   .not('[href="#"]')
   .not('[href="#0"]')
   .click(function(event) {
+    $('#navbarsExampleDefault').removeClass('show')
     // On-page links
     if (
       location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '')
