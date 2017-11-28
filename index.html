@@ -4,8 +4,8 @@
   <title>Henry's Glass</title>
   <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
-  <link rel="stylesheet" href="carousel.css">
-  <link rel="stylesheet" href="custom-style.css">
+  <link rel="stylesheet" href="css/carousel.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body data-spy="scroll" data-target=".navbar" data-offset="83">
   <header>
@@ -34,14 +34,12 @@
               <a class="nav-link" href="#contact-us">Contact</a>
             </li>
           </ul>
-          <form class="form-inline my-2 my-lg-0">
             <button
               class="btn btn-outline-success my-2 my-sm-0"
               data-toggle="modal"
               data-target="#quote-modal">
                 Get Quote
             </button>
-          </form>
         </div>
     </nav>
   </header>
@@ -53,7 +51,7 @@
             <div class="carousel-caption text-left">
               <div class="row">
                 <!-- <h1>Henry's Glass</h1> -->
-                <img id="main-logo" src="logo/black-on-transparent.png" alt="Henry's Glass logo">
+                <img id="main-logo" src="img/logo/black-on-transparent.png" alt="Henry's Glass logo">
                 <!-- <p><a class="btn btn-lg btn-primary" href="#" role="button">Get Quote Now</a></p> -->
                 <a href="tel:+01-281-797-2841">
                   <div class="quote-badge">
@@ -93,7 +91,7 @@
         </div>
         <div class="col-md-4">
           <div class="heading-img">
-            <img class="col-md-12" src="img/insulated-glass.webp" alt="insulated glass">
+            <img class="col-md-12" src="img/insulated-glass.png" alt="insulated glass">
           </div>
           <h2>Insulated Glass</h2>
           <p>
@@ -103,7 +101,7 @@
         </div>
         <div class="col-md-4">
           <div class="heading-img">
-            <img class="col-md-12" src="img/replacement-windows.webp" alt="replacement windows">
+            <img class="col-md-12" src="img/replacement-windows.png" alt="replacement windows">
           </div>
           <h2>Replacement Windows</h2>
           <p>
@@ -142,7 +140,7 @@
             <div class="col-md-4">
               <div class="container fill-heading">
               <div class="heading-img">
-                <img class="col-md-12" src="img/showers.webp" alt="showers">
+                <img class="col-md-12" src="img/showers.png" alt="showers">
               </div>
               <h2>Showers</h2>
               <p>
@@ -155,7 +153,7 @@
             <div class="col-md-4">
               <div class="container fill-heading">
               <div class="heading-img">
-                <img class="col-md-12" src="img/windows.webp" alt="windows">
+                <img class="col-md-12" src="img/windows.png" alt="windows">
               </div>
               <h2>Windows</h2>
               <p>
@@ -169,7 +167,7 @@
             <div class="col-md-4">
               <div class="container fill-heading">
               <div class="heading-img">
-                <img class="col-md-12" src="img/screens.webp" alt="screens">
+                <img class="col-md-12" src="img/screens.png" alt="screens">
               </div>
               <h2>Screens</h2>
               <p>
@@ -307,7 +305,7 @@
           </div> <!-- .row -->
           <div class="row">
             <div class="col-md-4">
-              <img class="col-md-12" src="img/mark-n-caden.webp" alt="Mark Cassiani">
+              <img class="col-md-12" src="img/mark-n-caden.png" alt="Mark Cassiani">
             </div>
             <div class="col-md-8">
               <div>
@@ -339,21 +337,21 @@
             </p>
           </div>
           <div class="col-md-8">
-            <form>
+            <form id="contact-us-form" novalidate>
               <div class="contact-form-messages"></div>
               <div class="row">
                 <div class="col-md-6">
                   <div class="form-group">
                     <label for="form_name">Firstname *</label>
-                    <input id="form_name" type="text" name="firstname" class="form-control" placeholder="Please enter your firstname *" required="required" data-error="Firstname is required.">
-                    <div class="help-block with-errors"></div>
+                    <input id="form_name" type="text" name="firstname" class="form-control" placeholder="John" required="required" data-error="Firstname is required.">
+                    <div class="invalid-feedback">Please provide a firstname</div>
                   </div>
                 </div>
                 <div class="col-md-6">
                   <div class="form-group">
                     <label for="form_lastname">Lastname *</label>
-                    <input id="form_lastname" type="text" name="lastname" class="form-control" placeholder="Please enter your lastname *" required="required" data-error="Lastname is required.">
-                    <div class="help-block with-errors"></div>
+                    <input id="form_lastname" type="text" name="lastname" class="form-control" placeholder="Doe" required="required" data-error="Lastname is required.">
+                    <div class="invalid-feedback">Please provide a lastname</div>
                   </div>
                 </div>
               </div> <!-- .row -->
@@ -361,14 +359,14 @@
                 <div class="col-md-6">
                   <div class="form-group">
                     <label for="form_email">Email *</label>
-                    <input id="form_email" type="text" name="email" class="form-control" placeholder="Please enter your email *" required="required" data-error="email is required.">
-                    <div class="help-block with-errors"></div>
+                    <input id="form_email" type="text" name="email" class="form-control" placeholder="john.doe@example.com" required="required" data-error="email is required.">
+                    <div class="invalid-feedback">Please provide a valid email</div>
                   </div>
                 </div>
                 <div class="col-md-6">
                   <div class="form-group">
                     <label for="form_phone">Phone</label>
-                    <input id="form_phone" type="text" name="phone" class="form-control" placeholder="Please enter your phone number">
+                    <input id="form_phone" type="text" name="phone" class="form-control" placeholder="281-555-1234">
                     <div class="help-block with-errors"></div>
                   </div>
                 </div>
@@ -377,7 +375,7 @@
                 <div class="col-md-12">
                   <div class="form-group">
                     <label for="form_subject">Subject</label>
-                    <input id="form_subject" type="text" name="subject" class="form-control" placeholder="Add a subject">
+                    <input id="form_subject" type="text" name="subject" class="form-control" placeholder="Broken Windows">
                     <div class="help-block with-errors"></div>
                   </div>
                 </div>
@@ -386,12 +384,12 @@
                 <div class="col-md-12">
                   <div class="form-group">
                     <label for="form_message">Message *</label>
-                    <textarea id="form_message" name="message" class="form-control" placeholder="Message for Henry's Glass *" rows="4" required="required" data-error="Please,leave us a message."></textarea>
-                    <div class="help-block with-errors"></div>
+                    <textarea id="form_message" name="message" class="form-control" placeholder="Some jerk smashed my windows. Plz help!" rows="4" required="required" data-error="Please,leave us a message."></textarea>
+                    <div class="invalid-feedback">Please provide a message</div>
                   </div>
                 </div>
                 <div class="col-md-4">
-                  <input type="submit" class="btn btn-success btn-send" value="Send message">
+                  <button id="send-message" class="btn btn-success" type="button">Send message</button>
                 </div>
                 <div class="col-md-8">
                   <p class="text-muted "><strong>*</strong> These fields are required.</p>
@@ -428,21 +426,21 @@
         </button>
       </div>
       <div class="modal-body">
-        <form>
+        <form id="modal-form" novalidate>
           <div class="contact-form-messages"></div>
           <div class="row">
             <div class="col-md-6">
               <div class="form-group">
                 <label for="form_name">Firstname *</label>
-                <input id="form_name" type="text" name="firstname" class="form-control" placeholder="Please enter your firstname *" required="required" data-error="Firstname is required.">
-                <div class="help-block with-errors"></div>
+                <input id="modal-form_name" type="text" name="firstname" class="form-control" placeholder="John" required="required" data-error="Firstname is required.">
+                <div class="invalid-feedback">Please provide a firstname</div>
               </div>
             </div>
             <div class="col-md-6">
               <div class="form-group">
                 <label for="form_lastname">Lastname *</label>
-                <input id="form_lastname" type="text" name="lastname" class="form-control" placeholder="Please enter your lastname *" required="required" data-error="Lastname is required.">
-                <div class="help-block with-errors"></div>
+                <input id="modal-form_lastname" type="text" name="lastname" class="form-control" placeholder="Doe" required="required" data-error="Lastname is required.">
+                <div class="invalid-feedback">Please provide a lastname</div>
               </div>
             </div>
           </div> <!-- .row -->
@@ -450,14 +448,14 @@
             <div class="col-md-6">
               <div class="form-group">
                 <label for="form_email">Email *</label>
-                <input id="form_email" type="text" name="email" class="form-control" placeholder="Please enter your email *" required="required" data-error="email is required.">
-                <div class="help-block with-errors"></div>
+                <input id="modal-form_email" type="text" name="email" class="form-control" placeholder="john.doe@example.com" required="required" data-error="email is required.">
+                <div class="invalid-feedback">Please provide a valid email</div>
               </div>
             </div>
             <div class="col-md-6">
               <div class="form-group">
                 <label for="form_phone">Phone</label>
-                <input id="form_phone" type="text" name="phone" class="form-control" placeholder="Please enter your phone number">
+                <input id="modal-form_phone" type="text" name="phone" class="form-control" placeholder="281-555-1234">
                 <div class="help-block with-errors"></div>
               </div>
             </div>
@@ -466,7 +464,7 @@
             <div class="col-md-12">
               <div class="form-group">
                 <label for="form_subject">Subject</label>
-                <input id="form_subject" type="text" name="subject" class="form-control" placeholder="Add a subject">
+                <input id="modal-form_subject" type="text" name="subject" class="form-control" placeholder="Broken Windows">
                 <div class="help-block with-errors"></div>
               </div>
             </div>
@@ -475,8 +473,8 @@
             <div class="col-md-12">
               <div class="form-group">
                 <label for="form_message">Message *</label>
-                <textarea id="form_message" name="message" class="form-control" placeholder="Describe the nature of your glass needs *" rows="4" required="required" data-error="Please,leave us a message."></textarea>
-                <div class="help-block with-errors"></div>
+                <textarea id="modal-form_message" name="message" class="form-control" placeholder="Some jerk smashed my windows. Plz help!" rows="4" required="required" data-error="Please,leave us a message."></textarea>
+                <div class="invalid-feedback">Please provide a message</div>
               </div>
             </div>
             <div class="col-md-12">
@@ -487,7 +485,7 @@
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Submit</button>
+        <button id="modal-send-message" class="btn btn-success" type="button">Send message</button>
       </div>
     </div>
   </div>
@@ -497,9 +495,9 @@
   <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
-
   <!-- Nick's scripts -->
-  <script src="parallax.js"></script>
+  <script src="js/parallax.js"></script>
+  <script src="js/quote.js"></script>
   <script>
     //Keep copyright year current
     (function($) {
