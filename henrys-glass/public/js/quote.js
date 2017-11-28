@@ -75,6 +75,7 @@
     });
   }
 
+  //wire up "Contact Us" form
   wireUpQuoteForm('send-message',
                   'form_name',
                   'form_lastname',
@@ -83,6 +84,7 @@
                   'form_subject',
                   'form_message');
 
+  // wire up modal form
   wireUpQuoteForm('modal-send-message',
                   'modal-form_name',
                   'modal-form_lastname',
