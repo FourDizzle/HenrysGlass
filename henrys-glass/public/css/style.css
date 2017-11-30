@@ -155,19 +155,10 @@ a.navbar-brand {
 
 .team-container {
   background: rgba(255, 255, 255, 0.7);
-  padding-bottom: 2rem;
+  padding: 2rem;
   margin-bottom: 4rem;
   margin-top: 2rem;
-}
-
-.team-row {
-  border-bottom: 2px #888 solid;
-  margin-bottom: 4rem;
-}
-
-.team-row h1 {
-  padding-top: 2rem;
-  margin-left: 1rem;
+  font-size: 1.1rem;
 }
 
 #contact-us {
