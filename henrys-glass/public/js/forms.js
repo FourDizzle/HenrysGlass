@@ -168,12 +168,10 @@
     addToFormValue('firstname', firstname, validateNameInput);
     addToFormValue('lastname', lastname, validateNameInput);
     if (validateContactMethodSelect(primaryContactSelect)) {
-      var primaryKey = 'primary' + primaryContact.prop('name');
-      addToFormValue(primaryKey, primaryContact, validateContactMethod);
+      addToFormValue('primary', primaryContact, validateContactMethod);
     }
     if (validateContactMethodSelect(secondaryContactSelect)) {
-      var secondaryKey = 'secondary' + secondaryContact.prop('name');
-      addToFormValue(secondaryKey, secondaryContact, validateContactMethod);
+      addToFormValue('secondary', secondaryContact, validateContactMethod);
     }
     addToFormValue('message', message, validateMessageInput);
     if (isValid) {
