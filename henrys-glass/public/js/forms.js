@@ -4,15 +4,31 @@
   var phoneRegex = /^\(\d{3}\)\s\d{3}\-\d{4}$/
   var emailRegex = /^(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*|"(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21\x23-\x5b\x5d-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])*")@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\[(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?|[a-z0-9-]*[a-z0-9]:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21-\x5a\x53-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])+)\])$/;
 
-  function sendMessage(message) {
+  function sendMessage(message, success, error) {
     console.log(message);
     $.post('api/quote', message, function(data) {
-      console.log(data);
-    })
+      if (typeof success === 'function') success();
+      // if (data && datasuccess) {
+      //   if (typeof success === 'function') success();
+      // }
+    }).fail(function() {
+      console.log('running error');
+      if (typeof error === 'function') error();
+    });
   }
 
   function alertFormSuccessfullySent(form) {
-    console.log('Success!!!');
+    var successAlert = $(form).find('.alert-success');
+    console.log('Success!');
+    successAlert.toggleClass('show');
+    setTimeout(successAlert.toggleClass.bind(successAlert, 'show'), 2000);
+  }
+
+  function quoteErrorMessage(form) {
+    var errorAlert = $(form).find('.alert-danger');
+    console.log('Failed!!!!');
+    errorAlert.toggleClass('show');
+    setTimeout(errorAlert.toggleClass.bind(errorAlert, 'show'), 2000);
   }
 
   function validateMessageInput(messageInput) {
@@ -287,9 +303,10 @@
     message = validateAndGetFormValue(form);
 
     if (message) {
-      sendMessage(message);
-      resetForm(form);
-      alertFormSuccessfullySent(form)
+      sendMessage(message, function() {
+        resetForm(form);
+        alertFormSuccessfullySent(form);
+      }, quoteErrorMessage.bind(null, form));
     }
   });
 

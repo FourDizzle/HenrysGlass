@@ -168,6 +168,11 @@ a.navbar-brand {
   margin-bottom: 2rem;
 }
 
+.form-alert {
+  position: absolute;
+  z-index: 1000;
+}
+
 .contact-info {
   font-size: 1.1rem;
 }
