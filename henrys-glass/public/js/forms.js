@@ -6,6 +6,9 @@
 
   function sendMessage(message) {
     console.log(message);
+    $.post('api/quote', message, function(data) {
+      console.log(data);
+    })
   }
 
   function alertFormSuccessfullySent(form) {
