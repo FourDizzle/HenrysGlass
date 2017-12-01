@@ -372,44 +372,74 @@
                 <div class="col-md-6">
                   <div class="form-group">
                     <label for="form_name">Firstname *</label>
-                    <input id="form_name" type="text" name="firstname" class="form-control" placeholder="John" required="required" data-error="Firstname is required.">
+                    <input type="text" name="firstname" class="form-control" placeholder="John" required="required" data-error="Firstname is required.">
                     <div class="invalid-feedback">Please provide a firstname</div>
                   </div>
                 </div>
                 <div class="col-md-6">
                   <div class="form-group">
                     <label for="form_lastname">Lastname *</label>
-                    <input id="form_lastname" type="text" name="lastname" class="form-control" placeholder="Doe" required="required" data-error="Lastname is required.">
+                    <input type="text" name="lastname" class="form-control" placeholder="Doe" required="required" data-error="Lastname is required.">
                     <div class="invalid-feedback">Please provide a lastname</div>
                   </div>
                 </div>
               </div> <!-- .row -->
               <div class="row">
-                <div class="col-md-6">
-                  <div class="form-group">
-                    <label for="form_email">Email *</label>
-                    <input id="form_email" type="text" name="email" class="form-control" placeholder="john.doe@example.com" required="required" data-error="email is required.">
-                    <div class="invalid-feedback">Please provide a valid email</div>
-                  </div>
+                <div class="form-group col-md-4">
+                  <label for="contact-method">Contact Method *</label>
+                  <select class="form-control contact-method-select primary-contact-select">
+                    <option>Choose...</option>
+                    <option>Email</option>
+                    <option>Phone Number</option>
+                  </select>
+                  <div class="invalid-feedback">Please choose one</div>
                 </div>
-                <div class="col-md-6">
-                  <div class="form-group">
-                    <label for="form_phone">Phone</label>
-                    <input id="form_phone" type="text" name="phone" class="form-control" placeholder="281-555-1234">
-                    <div class="help-block with-errors"></div>
-                  </div>
+                <div class="form-group col-md-8 contact-method-group">
+                  <label class="contact-method-label">&nbsp;</label>
+                  <input type="text" name="" class="primary-method form-control contact-method" placeholder="" required="required">
+                  <div class="invalid-feedback contact-method-invalid"></div>
                 </div>
               </div> <!-- .row -->
+
+              <div class="row add-contact-method">
+                <div class="form-group col-md-4">
+                  <button type="button" class="btn btn-secondary">+ Contact Method</button>
+                </div>
+              </div> <!-- .row -->
+
+              <div class="row secondary-contact-method">
+                <div class="form-group col-md-4">
+                  <label for="contact-method">Contact Method</label>
+                  <select class="form-control contact-method-select secondary-contact-select">
+                    <option>Choose...</option>
+                    <option>Email</option>
+                    <option>Phone Number</option>
+                  </select>
+                  <div class="invalid-feedback">Please choose one</div>
+                </div>
+                <div class="form-group col-md-7 contact-method-group">
+                  <label class="contact-method-label">&nbsp;</label>
+                  <input type="text" name="" class="secondary-method form-control contact-method" placeholder="" required="required">
+                  <div class="invalid-feedback contact-method-invalid"></div>
+                </div>
+                <div class="col-md-1">
+                  <label class="contact-method-2-label">&nbsp;</label>
+                  <button type="button" class="btn btn-danger remove-contact-method">-</button>
+                </div>
+              </div> <!-- .row -->
+
               <div class="row">
                 <div class="col-md-12">
                   <div class="form-group">
-                    <label for="form_message">Job Description *</label>
-                    <textarea id="form_message" name="message" class="form-control" placeholder="Some jerk smashed my windows. Plz help!" rows="4" required="required" data-error="Please,leave us a message."></textarea>
+                    <label for="form_message">Message *</label>
+                    <textarea name="message" class="form-control" placeholder="Some jerk smashed my windows. Plz help!" rows="4" required="required" data-error="Please,leave us a message."></textarea>
                     <div class="invalid-feedback">Please provide a message</div>
                   </div>
                 </div>
                 <div class="col-md-4">
-                  <button id="send-message" class="btn btn-success" type="button">Send message</button>
+                  <button id="contact-us-submit" class="btn btn-success message-submit" type="button">
+                    Send message
+                  </button>
                 </div>
                 <div class="col-md-8">
                   <p class="text-muted "><strong>*</strong> These fields are required.</p>
@@ -452,43 +482,73 @@
             <div class="col-md-6">
               <div class="form-group">
                 <label for="form_name">Firstname *</label>
-                <input id="modal-form_name" type="text" name="firstname" class="form-control" placeholder="John" required="required" data-error="Firstname is required.">
+                <input type="text" name="firstname" class="form-control" placeholder="John" required="required" data-error="Firstname is required.">
                 <div class="invalid-feedback">Please provide a firstname</div>
               </div>
             </div>
             <div class="col-md-6">
               <div class="form-group">
                 <label for="form_lastname">Lastname *</label>
-                <input id="modal-form_lastname" type="text" name="lastname" class="form-control" placeholder="Doe" required="required" data-error="Lastname is required.">
+                <input type="text" name="lastname" class="form-control" placeholder="Doe" required="required" data-error="Lastname is required.">
                 <div class="invalid-feedback">Please provide a lastname</div>
               </div>
             </div>
           </div> <!-- .row -->
           <div class="row">
-            <div class="col-md-6">
-              <div class="form-group">
-                <label for="form_email">Email *</label>
-                <input id="modal-form_email" type="text" name="email" class="form-control" placeholder="john.doe@example.com" required="required" data-error="email is required.">
-                <div class="invalid-feedback">Please provide a valid email</div>
-              </div>
+            <div class="form-group col-md-4">
+              <label for="contact-method">Contact Method *</label>
+              <select class="form-control contact-method-select primary-contact-select">
+                <option>Choose...</option>
+                <option>Email</option>
+                <option>Phone Number</option>
+              </select>
+              <div class="invalid-feedback">Please choose one</div>
             </div>
-            <div class="col-md-6">
-              <div class="form-group">
-                <label for="form_phone">Phone</label>
-                <input id="modal-form_phone" type="text" name="phone" class="form-control" placeholder="281-555-1234">
-                <div class="help-block with-errors"></div>
-              </div>
+            <div class="form-group col-md-8 contact-method-group">
+              <label class="contact-method-label">&nbsp;</label>
+              <input type="text" name="" class="primary-method form-control contact-method" placeholder="" required="required">
+              <div class="invalid-feedback contact-method-invalid"></div>
             </div>
           </div> <!-- .row -->
+
+          <div class="row add-contact-method">
+            <div class="form-group col-md-4">
+              <button type="button" class="btn btn-secondary">+ Contact Method</button>
+            </div>
+          </div> <!-- .row -->
+
+          <div class="row secondary-contact-method">
+            <div class="form-group col-md-4">
+              <label for="contact-method">Contact Method</label>
+              <select class="form-control contact-method-select secondary-contact-select">
+                <option>Choose...</option>
+                <option>Email</option>
+                <option>Phone Number</option>
+              </select>
+              <div class="invalid-feedback">Please choose one</div>
+            </div>
+            <div class="form-group col-md-7 contact-method-group">
+              <label class="contact-method-label">&nbsp;</label>
+              <input type="text" name="" class="secondary-method form-control contact-method" placeholder="" required="required">
+              <div class="invalid-feedback contact-method-invalid"></div>
+            </div>
+            <div class="col-md-1">
+              <label class="contact-method-2-label">&nbsp;</label>
+              <button type="button" class="btn btn-danger remove-contact-method">-</button>
+            </div>
+          </div> <!-- .row -->
+
           <div class="row">
             <div class="col-md-12">
               <div class="form-group">
-                <label for="form_message">Job Description *</label>
-                <textarea id="modal-form_message" name="message" class="form-control" placeholder="Some jerk smashed my windows. Plz help!" rows="4" required="required" data-error="Please,leave us a message."></textarea>
+                <label for="form_message">Message *</label>
+                <textarea name="message" class="form-control" placeholder="Some jerk smashed my windows. Plz help!" rows="4" required="required" data-error="Please,leave us a message."></textarea>
                 <div class="invalid-feedback">Please provide a message</div>
               </div>
             </div>
-            <div class="col-md-12">
+            <div class="col-md-4">
+            </div>
+            <div class="col-md-8">
               <p class="text-muted "><strong>*</strong> These fields are required.</p>
             </div>
           </div> <!-- .row -->
@@ -496,7 +556,7 @@
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button id="modal-send-message" class="btn btn-success" type="button">Send message</button>
+        <button id="modal-send-message" class="btn btn-success message-submit" type="button">Send message</button>
       </div>
     </div>
   </div>
@@ -508,7 +568,7 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
   <!-- Nick's scripts -->
   <script src="js/parallax.js"></script>
-  <script src="js/quote.js"></script>
+  <script src="js/forms.js"></script>
   <script>
     //Keep copyright year current
     (function($) {
