@@ -1,13 +1,12 @@
+const config = require('./config')
 var nodemailer = require('nodemailer');
-
-//TODO: have email deets come in through env vars
 
 //TODO: set up email
 var transporter = nodemailer.createTransport({
-  service: 'Godaddy',
+  service: config.emailProvider,
   auth: {
-    user: 'no-reply@henrysglasstx.com',
-    pass: 'password'
+    user: config.emailAddress,
+    pass: config.emailPassword
   }
 });
 
@@ -32,15 +31,13 @@ var sendMessage = message => {
     text: `${buildMessageBody(message)}`
   }
 
-  //TODO: uncomment!
-
-  // transporter.sendMail(mailOptions, (error, info) => {
-  //   if (error) {
-  //     console.log(error)
-  //   } else {
-  //     console.log('Email sent: ' + info.response)
-  //   }
-  // })
+  transporter.sendMail(mailOptions, (error, info) => {
+    if (error) {
+      console.log(error)
+    } else {
+      console.log('Email sent: ' + info.response)
+    }
+  })
 }
 
 module.exports = sendMessage
