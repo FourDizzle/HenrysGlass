@@ -125,6 +125,10 @@ a.navbar-brand {
   margin-bottom: 0;
 }
 
+.card {
+  margin-bottom: 1rem;
+}
+
 .about-header {
   background: #aaa url("../img/slideshow/tress-reflected-on-window.jpg") no-repeat;
   background-attachment: fixed;
@@ -183,6 +187,14 @@ footer {
 
 .webmaster-credit {
   text-align: right;
+}
+
+#gallery-modal .modal-dialog {
+  text-align:center;
+}
+
+#gallery-modal .modal-content {
+  display:inline-block;
 }
 
 @media (max-width: 767px) {
