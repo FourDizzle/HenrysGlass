@@ -34,6 +34,9 @@
               <a class="nav-link" href="#contact-us">Contact</a>
             </li>
           </ul>
+            <span id="nav-tel" class="my-2 my-sm-0">
+              Tel: <a href="tel:+01-281-797-2841">281-797-2841</a>
+            </span>
             <button
               class="btn btn-outline-success my-2 my-sm-0"
               data-toggle="modal"
@@ -138,43 +141,73 @@
       <div class="container-fluid services-list">
           <div class="row row-eq-height">
             <div class="col-md-4">
-              <div class="container fill-heading">
-              <div class="heading-img">
-                <img class="col-md-12" src="img/showers.png" alt="showers">
+
+              <div class="card">
+                <img class="card-img-top" src="img/showers.png" alt="showers">
+                <div class="card-body">
+                  <h4 class="card-title">Showers</h4>
+                  <p class="card-text">
+                    Change your old shower glass with a metal frame to a frameless glass enclosure.
+                    Permanent coating to prevent water spots and damage to the glass. Thicknesses
+                    available in 3/8" and 1/2" with a large variety on hardware finishes and styles.
+                  </p>
+                  <a
+                    class="btn btn-primary btn-lg"
+                    href="#"
+                    role="button"
+                    data-toggle="modal"
+                    data-target="#quote-modal">
+                      More Info »
+                  </a>
+                </div>
               </div>
-              <h2>Showers</h2>
-              <p>
-                Change your old shower glass with a metal frame to a frameless glass enclosure.
-                Permanent coating to prevent water spots and damage to the glass. Thicknesses available
-                in 3/8" and 1/2" with a large variety on hardware finishes and styles.
-              </p>
-            </div>
+
             </div>
             <div class="col-md-4">
-              <div class="container fill-heading">
-              <div class="heading-img">
-                <img class="col-md-12" src="img/windows.png" alt="windows">
+
+              <div class="card">
+                <img class="card-img-top" src="img/windows.png" alt="windows">
+                <div class="card-body">
+                  <h4 class="card-title">Windows</h4>
+                  <p class="card-text">
+                    Service all residential windows including single and double pane. Offering all
+                    available low efficiency glass coatings and thicknesses to match the existing
+                    units. Replaced with new high efficiency vinyl frames to cut down heat and noise
+                    in home and save on electrical bills.
+                  </p>
+                  <a
+                    class="btn btn-primary btn-lg"
+                    href="#"
+                    role="button"
+                    data-toggle="modal"
+                    data-target="#quote-modal">
+                      More Info »
+                  </a>
+                </div>
               </div>
-              <h2>Windows</h2>
-              <p>
-                Service all residential windows including single and double pane. Offering all available
-                low efficiency glass coatings and thicknesses to match the existing units. Replaced with
-                new high efficiency vinyl frames to cut down heat and noise in home and save on
-                electrical bills.
-              </p>
-            </div>
+
             </div>
             <div class="col-md-4">
-              <div class="container fill-heading">
-              <div class="heading-img">
-                <img class="col-md-12" src="img/screens.png" alt="screens">
+
+              <div class="card">
+                <img class="card-img-top" src="img/screens.png" alt="screens">
+                <div class="card-body">
+                  <h4 class="card-title">Screens</h4>
+                  <p class="card-text">
+                    Repair faded and torn bug screens or add solar screens to reduce the heat and
+                    light that comes through the windows.
+                  </p>
+                  <a
+                    class="btn btn-primary btn-lg"
+                    href="#"
+                    role="button"
+                    data-toggle="modal"
+                    data-target="#quote-modal">
+                      More Info »
+                  </a>
+                </div>
               </div>
-              <h2>Screens</h2>
-              <p>
-                Repair faded and torn bug screens or add solar screens to reduce the heat and light
-                that comes through the windows.
-              </p>
-            </div>
+
             </div>
           </div> <!-- .row -->
         </div> <!-- .container-fluid -->
@@ -297,8 +330,7 @@
               Get Quote »
           </a>
         </p>
-        <br><br>
-        <h2 class="display-4">Team<h2>
+        <br>
         <div class="container team-container nav-section">
           <div class="row">
             <div class="col-md-4">
@@ -371,16 +403,7 @@
               <div class="row">
                 <div class="col-md-12">
                   <div class="form-group">
-                    <label for="form_subject">Subject</label>
-                    <input id="form_subject" type="text" name="subject" class="form-control" placeholder="Broken Windows">
-                    <div class="help-block with-errors"></div>
-                  </div>
-                </div>
-              </div> <!-- .row -->
-              <div class="row">
-                <div class="col-md-12">
-                  <div class="form-group">
-                    <label for="form_message">Message *</label>
+                    <label for="form_message">Job Description *</label>
                     <textarea id="form_message" name="message" class="form-control" placeholder="Some jerk smashed my windows. Plz help!" rows="4" required="required" data-error="Please,leave us a message."></textarea>
                     <div class="invalid-feedback">Please provide a message</div>
                   </div>
@@ -460,16 +483,7 @@
           <div class="row">
             <div class="col-md-12">
               <div class="form-group">
-                <label for="form_subject">Subject</label>
-                <input id="modal-form_subject" type="text" name="subject" class="form-control" placeholder="Broken Windows">
-                <div class="help-block with-errors"></div>
-              </div>
-            </div>
-          </div> <!-- .row -->
-          <div class="row">
-            <div class="col-md-12">
-              <div class="form-group">
-                <label for="form_message">Message *</label>
+                <label for="form_message">Job Description *</label>
                 <textarea id="modal-form_message" name="message" class="form-control" placeholder="Some jerk smashed my windows. Plz help!" rows="4" required="required" data-error="Please,leave us a message."></textarea>
                 <div class="invalid-feedback">Please provide a message</div>
               </div>

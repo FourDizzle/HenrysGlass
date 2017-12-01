@@ -26,6 +26,16 @@ a.navbar-brand {
   margin: auto 0 auto 5rem;
 }
 
+#nav-tel {
+  color: #aaa;
+  padding-right: 2rem;
+  visibility: hidden;
+}
+
+#nav-tel a {
+  color: #ddd;
+}
+
 .quote-badge {
   color: #000;
   width: 15rem;
@@ -96,13 +106,6 @@ a.navbar-brand {
   background-color: #fff;
   margin: 0 1rem 0 1rem;
   padding: 1rem;
-  /*height: 580px;*/
-}
-
-.heading-../img {
-  height: 300px;
-  overflow: hidden;
-  margin-bottom: .75rem;
 }
 
 .header-caption {
@@ -179,6 +182,10 @@ footer {
 
 @media (max-width: 767px) {
   #main-logo {
+    display: none;
+  }
+
+  #nav-tel {
     display: none;
   }
 

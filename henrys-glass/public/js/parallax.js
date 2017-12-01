@@ -14,19 +14,18 @@
     if ($('#main-logo').css('display') === 'none') {
       resizeNavbarBrand(1)
     } else if (scrollLoc + navbarHeight >= topOfLogo + heightOfLogo) {
+      $('#nav-tel').css({visibility: 'visible'})
       resizeNavbarBrand(1)
     } else if (scrollLoc + navbarHeight >= topOfLogo) {
       var fractionOfSize = (scrollLoc + navbarHeight - topOfLogo) / heightOfLogo
       fractionOfSize = fractionOfSize > 1 ? 1 : fractionOfSize
       resizeNavbarBrand(fractionOfSize)
+      $('#nav-tel').css({visibility: 'hidden'})
     } else {
       resizeNavbarBrand(0)
+      $('#nav-tel').css({visibility: 'hidden'})
     }
   }
-
-  // $('.nav-link').click(function() {
-  //   $('#navbarsExampleDefault').dropdown('toggle')
-  // })
 
   $(window).scroll(function() {
     resizeNavBarByScrollLocation()
