@@ -86,7 +86,7 @@
       </div>
 
 
-    <div class="container nav-section">
+    <div class="container nav-section col-sm-12 col-md-9">
       <div class="row">
         <div class="col-md-4">
           <div class="heading-img">
@@ -123,7 +123,7 @@
     </div> <!-- .container -->
 
     <div id="services" class="jumbotron services-header">
-      <div class="container">
+      <div class="container col-sm-12 col-md-10">
         <h1 class="display-3">Services</h1>
         <p class="header-caption">
           Henry's Glass services bring the highest quality products and provide safety to your home.
@@ -143,81 +143,80 @@
               Get Quote »
           </a>
         </p>
+        <div class="container services-list">
+            <div class="row row-eq-height">
+              <div class="col-md-4">
+
+                <div class="card">
+                  <img class="card-img-top" src="img/showers.png" alt="showers">
+                  <div class="card-body">
+                    <h4 class="card-title">Showers</h4>
+                    <p class="card-text">
+                      Change your old shower glass with a metal frame to a frameless glass enclosure.
+                      Permanent coating to prevent water spots and damage to the glass. Thicknesses
+                      available in 3/8" and 1/2" with a large variety on hardware finishes and styles.
+                    </p>
+                    <a
+                      class="btn btn-primary btn-lg"
+                      href="#"
+                      role="button"
+                      data-toggle="modal"
+                      data-target="#quote-modal">
+                        More Info »
+                    </a>
+                  </div>
+                </div>
+
+              </div>
+              <div class="col-md-4">
+
+                <div class="card">
+                  <img class="card-img-top" src="img/windows.png" alt="windows">
+                  <div class="card-body">
+                    <h4 class="card-title">Windows</h4>
+                    <p class="card-text">
+                      Service all residential windows including single and double pane. Offering all
+                      available low efficiency glass coatings and thicknesses to match the existing
+                      units. Replaced with new high efficiency vinyl frames to cut down heat and noise
+                      in home and save on electrical bills.
+                    </p>
+                    <a
+                      class="btn btn-primary btn-lg"
+                      href="#"
+                      role="button"
+                      data-toggle="modal"
+                      data-target="#quote-modal">
+                        More Info »
+                    </a>
+                  </div>
+                </div>
+
+              </div>
+              <div class="col-md-4">
+
+                <div class="card">
+                  <img class="card-img-top" src="img/screens.png" alt="screens">
+                  <div class="card-body">
+                    <h4 class="card-title">Screens</h4>
+                    <p class="card-text">
+                      Repair faded and torn bug screens or add solar screens to reduce the heat and
+                      light that comes through the windows.
+                    </p>
+                    <a
+                      class="btn btn-primary btn-lg"
+                      href="#"
+                      role="button"
+                      data-toggle="modal"
+                      data-target="#quote-modal">
+                        More Info »
+                    </a>
+                  </div>
+                </div>
+
+              </div>
+            </div> <!-- .row -->
+          </div> <!-- .container-fluid -->
       </div> <!-- .container -->
-      <div class="container-fluid services-list">
-          <div class="row row-eq-height">
-            <div class="col-md-4">
-
-              <div class="card">
-                <img class="card-img-top" src="img/showers.png" alt="showers">
-                <div class="card-body">
-                  <h4 class="card-title">Showers</h4>
-                  <p class="card-text">
-                    Change your old shower glass with a metal frame to a frameless glass enclosure.
-                    Permanent coating to prevent water spots and damage to the glass. Thicknesses
-                    available in 3/8" and 1/2" with a large variety on hardware finishes and styles.
-                  </p>
-                  <a
-                    class="btn btn-primary btn-lg"
-                    href="#"
-                    role="button"
-                    data-toggle="modal"
-                    data-target="#quote-modal">
-                      More Info »
-                  </a>
-                </div>
-              </div>
-
-            </div>
-            <div class="col-md-4">
-
-              <div class="card">
-                <img class="card-img-top" src="img/windows.png" alt="windows">
-                <div class="card-body">
-                  <h4 class="card-title">Windows</h4>
-                  <p class="card-text">
-                    Service all residential windows including single and double pane. Offering all
-                    available low efficiency glass coatings and thicknesses to match the existing
-                    units. Replaced with new high efficiency vinyl frames to cut down heat and noise
-                    in home and save on electrical bills.
-                  </p>
-                  <a
-                    class="btn btn-primary btn-lg"
-                    href="#"
-                    role="button"
-                    data-toggle="modal"
-                    data-target="#quote-modal">
-                      More Info »
-                  </a>
-                </div>
-              </div>
-
-            </div>
-            <div class="col-md-4">
-
-              <div class="card">
-                <img class="card-img-top" src="img/screens.png" alt="screens">
-                <div class="card-body">
-                  <h4 class="card-title">Screens</h4>
-                  <p class="card-text">
-                    Repair faded and torn bug screens or add solar screens to reduce the heat and
-                    light that comes through the windows.
-                  </p>
-                  <a
-                    class="btn btn-primary btn-lg"
-                    href="#"
-                    role="button"
-                    data-toggle="modal"
-                    data-target="#quote-modal">
-                      More Info »
-                  </a>
-                </div>
-              </div>
-
-            </div>
-          </div> <!-- .row -->
-        </div> <!-- .container-fluid -->
-
     </div> <!-- .jumbotron -->
 
 
@@ -446,7 +445,7 @@
                 <div class="col-md-12">
                   <div class="form-group">
                     <label for="form_message">Message *</label>
-                    <textarea name="message" class="form-control" placeholder="Some jerk smashed my windows. Plz help!" rows="4" required="required" data-error="Please,leave us a message."></textarea>
+                    <textarea name="message" class="form-control" placeholder="The neighbor's kid put a baseball through my window. Plz help!" rows="4" required="required" data-error="Please,leave us a message."></textarea>
                     <div class="invalid-feedback">Please provide a message</div>
                   </div>
                 </div>
@@ -564,7 +563,7 @@
             <div class="col-md-12">
               <div class="form-group">
                 <label for="form_message">Message *</label>
-                <textarea name="message" class="form-control" placeholder="Some jerk smashed my windows. Plz help!" rows="4" required="required" data-error="Please,leave us a message."></textarea>
+                <textarea name="message" class="form-control" placeholder="The neighbor's kid put a baseball through my window. Plz help!" rows="4" required="required" data-error="Please,leave us a message."></textarea>
                 <div class="invalid-feedback">Please provide a message</div>
               </div>
             </div>
